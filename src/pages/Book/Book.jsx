@@ -4,9 +4,9 @@ import { Link } from 'react-router';
 
 const Book = ({ single }) => {
 
-    const { bookName, yearOfPublishing,bookId
-, tags, category, review, image, publisher, rating } = single
-    console.log(single)
+    const { bookName, yearOfPublishing, bookId
+        , tags, category, review, image, publisher, rating } = single
+    // console.log(single)
     return (
         <Link to={`/bookDetails/${bookId}`}>
             <div className="card bg-base-100 w-96 shadow-sm border-2 border-gray-400 p-5">
@@ -19,7 +19,7 @@ const Book = ({ single }) => {
 
                     <div className='flex items-center gap-6'>
                         {
-                            tags.map(tag => <button className='text-green-500 px-3 rounded-[6px] bg-green-200 font-semibold '>{tag}</button>)
+                            tags.map((tag, index) => <button key={index} className='text-green-500 px-3 rounded-[6px] bg-green-200 font-semibold '>{tag}</button>)
                         }
                     </div>
                     <h2 className="card-title font-bold text-1xl">
