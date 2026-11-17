@@ -12,8 +12,14 @@ const Banner = () => {
                 before:animate-[spin_2s_linear_infinite] before:blur-[2px] after:content-[''] after:absolute after:inset-[3px] after:-z-10 after:rounded-md after:bg-green-500 shadow-[0_0_15px_blue,0_0_25px_red]">View The List </button>
 
             </div>
-            <div>
-                <img className='w-10/12' src={bookImage} alt="" />
+            <div className="relative flex justify-center items-center">
+                <div className="absolute w-8/12 h-8/12 rounded-full bg-green-400/40 blur-3xl animate-pulse"></div>
+
+                <img
+                    className="relative z-10 w-10/12"
+                    src={bookImage}
+                    alt=""
+                />
             </div>
         </div>
     );
