@@ -53,7 +53,7 @@ const ReadTab = ({ tab }) => {
                     </span>
 
                     <Link
-                        to={`/book/${bookId}`}
+                        to={`/bookDetails/${bookId}`}
                         className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300"
                     >
                         View Details
