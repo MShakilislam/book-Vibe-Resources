@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Book = ({ single }) => {
 
     const { bookName, yearOfPublishing, bookId
-        , tags, category, review, image, publisher, rating } = single
+        , tags, category, image, publisher, rating } = single
     // console.log(single)
     return (
         <Link to={`/bookDetails/${bookId}`}>

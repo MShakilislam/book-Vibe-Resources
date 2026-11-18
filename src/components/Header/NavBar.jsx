@@ -6,7 +6,7 @@ const NavBar = () => {
     const link = <>
         <Link to="/"><li className='p-2 mr-2 font-semibold text-[18px]  text-gray-800'>Home</li></Link>
         <Link to="/about"><li className='p-2 mr-2 font-semibold text-[18px] text-gray-800'>About</li></Link>
-        <li className='p-2 mr-2 font-semibold text-[18px]  text-gray-800'>Pages to Read</li>
+        <Link to="/readList"><li className='p-2 mr-2 font-semibold text-[18px]  text-gray-800'>Pages to Read</li></Link>
     </>
     return (
         <div className="navbar bg-base-100 ">
@@ -18,18 +18,18 @@ const NavBar = () => {
                     <ul
                         tabIndex={-1}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                       {
-                        link
-                       }
+                        {
+                            link
+                        }
                     </ul>
                 </div>
                 <a className="btn btn-ghost font-bold text-xl">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                   {
-                    link
-                   }
+                    {
+                        link
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
