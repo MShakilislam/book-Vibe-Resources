@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addToStordBD } from '../../utility/addToDB';
 
 const BookDetails = () => {
 
@@ -9,7 +10,11 @@ const BookDetails = () => {
     const data = useLoaderData();
     const singleBook = data.find(book => book.bookId === bookid);
 
-    const {image,bookName,author,category,review, tags,totalPages,publisher, yearOfPublishing,rating } = singleBook;
+    const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = singleBook;
+
+    const handleMarksAddRead = id => {
+        addToStordBD(id)
+    }
 
     return (
         <div className="max-w-6xl mx-auto my-10 p-5">
@@ -75,7 +80,7 @@ const BookDetails = () => {
                     {/* Buttons */}
                     <div className="flex gap-4 mt-6">
 
-                        <button className="px-7 cursor-pointer py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 duration-300"> Read</button>
+                        <button onClick={() => handleMarksAddRead(id)} className="px-7 cursor-pointer py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 duration-300"> Read</button>
 
                         <button className="px-7 cursor-pointer py-3 bg-cyan-500 text-white rounded-lg font-semibold hover:bg-cyan-600 duration-300 shadow-md">Wishlist</button>
 
