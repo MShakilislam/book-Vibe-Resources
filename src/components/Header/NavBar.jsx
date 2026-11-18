@@ -4,9 +4,9 @@ import { Link } from 'react-router';
 const NavBar = () => {
 
     const link = <>
-        <Link to="/"><li className='p-2 mr-2 font-semibold text-[18px]  text-gray-800'>Home</li></Link>
-        <Link to="/about"><li className='p-2 mr-2 font-semibold text-[18px] text-gray-800'>About</li></Link>
-        <Link to="/readList"><li className='p-2 mr-2 font-semibold text-[18px]  text-gray-800'>Pages to Read</li></Link>
+        <Link to="/"><li className='p-2 mr-2 bg-orange-400 rounded-[6px] hover:bg-amber-700 transition ms-1 hover:text-white font-semibold text-[18px]  text-gray-800'>Home</li></Link>
+        <Link to="/about"><li className='p-2 bg-orange-400 rounded-[6px] hover:bg-amber-700 transition ms-1 hover:text-white  mr-2 font-semibold text-[18px] text-gray-800'>About</li></Link>
+        <Link to="/readList"><li className='p-2 bg-orange-400 rounded-[6px] hover:bg-amber-700 transition ms-1 hover:text-white  mr-2 font-semibold text-[18px]  text-gray-800'>Pages to Read</li></Link>
     </>
     return (
         <div className="navbar bg-base-100 ">
@@ -23,7 +23,7 @@ const NavBar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost font-bold text-xl">Book Vibe</a>
+                <a className="btn bg-green-400 btn-ghost font-bold text-xl">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -32,8 +32,9 @@ const NavBar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end ">
+                <a className="btn bg-green-700 text-white">Sign In</a>
+                <a className="btn bg-sky-400">Button</a>
             </div>
         </div>
     );
