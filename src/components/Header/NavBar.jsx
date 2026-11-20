@@ -17,10 +17,12 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={-1}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {
-                            link
-                        }
+                        className="">
+                        <li className='bg-base-100 menu menu-sm dropdown-content  rounded-box z-1 mb-3 w-52 p-2 shadow'>
+                            {
+                                link
+                            }
+                        </li>
                     </ul>
                 </div>
                 <a className="btn bg-green-400 btn-ghost font-bold text-xl">Book Vibe</a>
